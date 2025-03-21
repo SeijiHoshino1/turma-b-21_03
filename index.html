@@ -1,30 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu perfil</title>
+    <title>Rede Social</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header class="profile-header text-center">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <h1>Seiji Hoshino</h1>
-            <p class="lead">Analista de sistemas</p>
+            <a class="navbar-brand" href="#">Rede Social</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#"><i class="fas fa-home"></i> Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-user"></i> Perfil</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="profile-header">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3 text-center">
+                    <img src="images/foto.jpg" alt="Foto de Perfil" class="profile-img">
+                </div>
+                <div class="col-md-9">
+                    <h1>Seiji Hoshino</h1>
+                    <p>Analista de sistemas</p>
+                    <p>Estudante de ADS e Cibersegurança</p>
+                </div>
+            </div>
         </div>
     </header>
 
-    <div class="container">
+    <div class="container main-content">
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <img src="images/foto.jpg" alt="Profile Picture" class="profile-img mb-3">
-                        <h3 class="card-title">Seiji Hoshino</h3>
-                        <p class="card-text">Estudante de ADS e Cibersegurança.</p>
-                        <div class="social-icons mt-3">
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Informações de Contato</h5>
+                        <p><i class="fas fa-envelope me-2"></i> seijihoshino@outlook.com</p>
+                        <p><i class="fas fa-phone me-2"></i> (44) 98815-2539</p>
+                        <p><i class="fas fa-map-marker-alt me-2"></i> Maringá, PR</p>
+                        
+                        <h5 class="card-title mt-4">Habilidades</h5>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">HTML/CSS</div>
+                        <div class="skill-tag">JavaScript</div>
+                        
+                        <h5 class="card-title mt-4">Conecte-se</h5>
+                        <div class="social-icons">
                             <a href="https://www.linkedin.com/in/seiji-andre-hoshino-150b172a2/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
                             <a href="https://github.com/SeijiHoshino1" title="GitHub"><i class="fab fa-github"></i></a>
                         </div>
@@ -34,35 +69,66 @@
             
             <div class="col-md-8">
                 <div class="card mb-4">
-                    <div class="card-header">
-                        <h4>Informações de contato</h4>
-                    </div>
                     <div class="card-body">
-                        <p><i class="fas fa-envelope me-2"></i> seijihoshino@outlook.com</p>
-                        <p><i class="fas fa-phone me-2"></i> (44) 98815-2539</p>
-                        <p><i class="fas fa-map-marker-alt me-2"></i> Maringá, PR</p>
+                        <div class="d-flex">
+                            <input type="text" class="form-control" placeholder="Compartilhe algo...">
+                            <button class="btn btn-primary ms-2">Publicar</button>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="card">
-                    <div class="card-header">
-                        <h4>Atividades recentes</h4>
+                <div class="posts-feed">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <h6 class="mb-0">Seiji Hoshino</h6>
+                                    <p class="text-muted small mb-0">15 de Março de 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>Automação de manipulação de dados em Python. Trabalhando com a API do ERP do Conta Azul para automatizar processos de dados.</p>
+                            <div class="post-actions d-flex mt-3">
+                                <button class="btn btn-sm btn-light"><i class="far fa-thumbs-up"></i> Curtir</button>
+                                <button class="btn btn-sm btn-light mx-2"><i class="far fa-comment"></i> Comentar</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div class="activity-item">
-                            <h5>Automação de manipulação de dados em Python</h5>
-                            <p class="text-muted">15 de Março de 2025</p>
-                            <p>Manipulação de dados baseado na API do ERP do Conta Azul.</p>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <h6 class="mb-0">Seiji Hoshino</h6>
+                                    <p class="text-muted small mb-0">14 de Março de 2025</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="activity-item">
-                            <h5>Atividade de HTML e CSS de frontend</h5>
-                            <p class="text-muted">14 de Março de 2025</p>
-                            <p>Perfil pessoal em HTML e CSS proposto pelo professor.</p>
+                        <div class="card-body">
+                            <p>Concluí o projeto de HTML e CSS de frontend. Aqui está o perfil pessoal que criei!</p>
+                            <div class="post-actions d-flex mt-3">
+                                <button class="btn btn-sm btn-light"><i class="far fa-thumbs-up"></i> Curtir</button>
+                                <button class="btn btn-sm btn-light mx-2"><i class="far fa-comment"></i> Comentar</button>
+                            </div>
                         </div>
-                        <div class="activity-item">
-                            <h5>Análise de ERPs</h5>
-                            <p class="text-muted">18 de Março de 2025</p>
-                            <p>Análise e pesquisa de ERPs para auxiliar na escolha da empresa.</p>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    <h6 class="mb-0">Seiji Hoshino</h6>
+                                    <p class="text-muted small mb-0">18 de Março de 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p>Análise e pesquisa de ERPs para auxiliar na escolha da empresa. Encontrei algumas opções interessantes!</p>
+                            <div class="post-actions d-flex mt-3">
+                                <button class="btn btn-sm btn-light"><i class="far fa-thumbs-up"></i> Curtir</button>
+                                <button class="btn btn-sm btn-light mx-2"><i class="far fa-comment"></i> Comentar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -70,8 +136,8 @@
         </div>
     </div>
     
-    <footer class="bg-light text-center py-3 mt-5">
-        <p>© 2025 Seiji Hoshino. All Rights Reserved.</p>
+    <footer class="text-center py-3 mt-3">
+        <p>© 2025 Rede Social. Todos os direitos reservados.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
